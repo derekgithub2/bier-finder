@@ -3,13 +3,18 @@ import './Form.css'
 import Link from 'react'
 import states from './states'
 
-const Form = ({dropdown}) => {
+const Form = ({setSearched}) => {
 
     const [searchInput, setSearchInput] = useState('')
 
     const handleChange = (e) => {
         e.preventDefault()
         setSearchInput(e.target.value)
+    }
+
+    const handleClick = (e) => {
+        e.preventDefault()
+        setSearched(searchInput)
     }
 
     const stateList = states.map(state => {
@@ -31,6 +36,11 @@ const Form = ({dropdown}) => {
                 <datalist id='dropdown-menu'>
                     {stateList}
                 </datalist>
+                <div>
+                    {/* <Link to="/"> */}
+                        <button onClick={handleClick} type='submit'>Go!</button>
+                    {/* </Link> */}
+                </div>
             </form>
         </div>
     )
