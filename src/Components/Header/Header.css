@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    position: absolute;
+    left: 5px;
+    height: 5vh;
+    width: 5vh;
+    margin-inline: 1em;
+}
