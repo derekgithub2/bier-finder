@@ -8,9 +8,9 @@ const Main = () => {
     return (
         <div className='main'>
             <p>Form/Search bar goes here</p>
-            {/* <Form /> */}
+            <Form />
             <p>Card Container goes here</p>
-            {/* <CardContainer /> */}
+            <CardContainer />
         </div>
     )
 }
