@@ -1,8 +1,9 @@
-const fetchData = (searchInput) => {
-    
-    const url = 'https://api.openbrewerydb.org/breweries'
+const searchInput = 'oregon'
+const url = 'https://api.openbrewerydb.org/breweries'
 
-    return fetch( `${url}?by_city=${searchInput}` )
+const fetchData = () => {
+
+    return fetch( `${url}?by_state=${searchInput}` )
         .then(response => {
             if(response.ok) {
                 return response.json()
