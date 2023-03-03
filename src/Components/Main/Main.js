@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Main.css'
 import Form from '../Form/Form'
-import CardContainer from '../Card/Card'
+import Card from '../Card/Card'
 // import { fetchData } from '../../apiCalls'
 
 const Main = () => {
@@ -33,12 +33,20 @@ const Main = () => {
     return (
         <div className='main'>
             <p>Click the search bar to search your state!</p>
-            {/* <Form searchFunc={}/> */}
             <Form setSearch={setSearchInput} />
-            <p>Card Container goes here</p>
             <div style={{display: loading ? "block" : "none"}}>Loading...</div>
             {/* <div style={{display: error ? "block" : "none"}}><h1>Error</h1></div> */}
-            <CardContainer byState={dataList}/>
+            <section className="card-grid">
+                {dataList.map((brew) => {
+                    return <Card 
+                    name={brew.name} 
+                    street={brew.street}
+                    city={brew.city}
+                    state={brew.state}
+                    website={brew.website}
+                    phone={brew.phone}/>
+                })}
+            </section>
         </div>
     )
 }
