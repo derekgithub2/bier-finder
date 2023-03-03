@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './CardContainer.css'
 import Card from '../Card/Card'
-import { fetchData } from '../../apiCalls'
 
 const CardContainer = (byState) => {
 
