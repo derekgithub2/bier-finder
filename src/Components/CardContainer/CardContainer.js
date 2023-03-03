@@ -1,29 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import './CardContainer.css'
 import Card from '../Card/Card'
+import { fetchData } from '../../apiCalls'
 
-const CardContainer = ({fullArray, usersCity}) => {
+const CardContainer = (byState) => {
 
-    // do fetch call and pass down to card everything we need to display on the card.
-    // usersCity 
-    // const breweries = dataList.map(brewery => {
-    //     return (
-    //         <Card 
-    //             name = {brewery.name}
-    //             street = {brewery.street}
-    //             city = {brewery.city}
-    //             country = {brewery.country}
-    //             website = {brewery.website ? brewery.website : "none"}
-    //             phone = {brewery.phone}
-    //             key = {brewery.id}
-    //         />
-    //     )
-    // })
+    const breweries = byState.map(brewery => {
+        return (
+            <Card 
+                name = {brewery.name}
+                street = {brewery.street}
+                city = {brewery.city}
+                country = {brewery.country}
+                website = {brewery.website}
+                phone = {brewery.phone}
+                key = {brewery.id}
+            />
+        )
+    })
 
 
     return (
-        <div>
-            <Card />
+        <div className='card-container'>
+            {breweries}
         </div>
     )
 }

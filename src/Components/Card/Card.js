@@ -2,27 +2,17 @@ import React from "react";
 import './Card.css'
 
 
+const Card = ({name, street, city, country, website, phone}) => {
 
-const Card = () => {
-
-
-    // const breweries = dataList.map(brewery => {
-    //     return (
-    //         <Card 
-    //             name = {brewery.name}
-    //             street = {brewery.street}
-    //             city = {brewery.city}
-    //             country = {brewery.country}
-    //             website = {brewery.website ? brewery.website : "none"}
-    //             phone = {brewery.phone}
-    //             key = {brewery.id}
-    //         />
-    //     )
-    // })
+    // const [brew, setBrews] = useState([])
 
     return (
-        <div className="breweries">
-            {/* {breweries} */}
+        <div className="card">
+            <p>Brewery: {name}</p>
+            <p>Street: {street}</p>
+            <p>City: {city}, {country}</p>
+            <p>Website: {website ? website : 'n/a'}</p>
+            <p>Phone: {phone ? phone : 'n/a'}</p>
         </div>
     )
 }
