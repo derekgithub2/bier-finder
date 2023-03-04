@@ -3,12 +3,6 @@
   flex-direction: column;
 }
 
-.main-container {
-  border: 1px solid black;
-  border-radius: 2em;
-  height: 75%;
-}
-
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {

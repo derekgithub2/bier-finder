@@ -2,36 +2,21 @@ import React from 'react'
 import './App.css';
 import Header from '../Header/Header'
 import Main from '../Main/Main'
-import { Router, Route, Link, Routes } from 'react-router-dom'
+import SingleView from '../SingleView/SingleView'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
 
   return (
     <div className='App'>
       <Header />
-      <main className='main-container'>
-        <Main />
-      </main>
+      <Routes>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/:name' element={<SingleView />}/>
+        {/* <Route path='*' element={<NotFound />}/> */}
+      </Routes>
 
-      {/* <Routes>
-        <Route 
-          path='/' 
-          element={
-            <div className='App'>
-              <Header />
-              <main className='main-container'>
-                <Main />
-              </main>
-            </div>} 
-        />
-        <Route 
-          exact path='/:id'
-          render={() => (
-            Single view here
-          )}
-        />
-      </Routes> */}
-
+      
     </div>
   )
 }
