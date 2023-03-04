@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './Main.css'
 import Form from '../Form/Form'
 import Card from '../Card/Card'
-// import { fetchData } from '../../apiCalls'
 
 const Main = () => {
 
@@ -28,14 +27,13 @@ const Main = () => {
         };
     }, [searchInput]);
 
-    
-
     return (
         <div className='main'>
-            <p>Click the search bar to search your state!</p>
-            <Form setSearch={setSearchInput} />
-            <div style={{display: loading ? "block" : "none"}}>Loading...</div>
-            {/* <div style={{display: error ? "block" : "none"}}><h1>Error</h1></div> */}
+            <section className='form-container'>
+                <p>Select a state below:</p>
+                <Form setSearch={setSearchInput} />
+                {/* <div style={{display: error ? "block" : "none"}}><h1>Error</h1></div> */}
+            </section>
             <section className="card-grid">
                 {dataList.map((brew) => {
                     return <Card 

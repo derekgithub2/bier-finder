@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Form.css";
-// import Link from 'react'
 import states from "./states";
-// import getData from "../../apiCalls";
 
 const Form = ({setSearch}) => {
   const [userChoice, setUserChoice] = useState("");
@@ -10,7 +8,6 @@ const Form = ({setSearch}) => {
   const handleChange = (e) => {
     e.preventDefault();
     setUserChoice(e.target.value);
-    setSearch(e.target.value)
   };
 
   const handleClick = (e) => {
