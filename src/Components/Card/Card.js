@@ -1,29 +1,21 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import './Card.css'
 
 
-
-const Card = () => {
-
-
-    // const breweries = dataList.map(brewery => {
-    //     return (
-    //         <Card 
-    //             name = {brewery.name}
-    //             street = {brewery.street}
-    //             city = {brewery.city}
-    //             country = {brewery.country}
-    //             website = {brewery.website ? brewery.website : "none"}
-    //             phone = {brewery.phone}
-    //             key = {brewery.id}
-    //         />
-    //     )
-    // })
+const Card = ({name, street, city, state, website, phone}) => {
 
     return (
-        <div className="breweries">
-            {/* {breweries} */}
-        </div>
+        <Link to={`/${name}`} style={{textDecoration: 'inherit', color: 'inherit'}}>
+            <div className="card">
+                <h4>Brewery: {name}</h4>
+                <p>Street: {street}</p>
+                <p>City: {city}, {state}</p>
+                <p>Website: {website ? website : 'n/a'}</p>
+                <p>Phone: {phone ? phone : 'n/a'}</p>
+            </div>
+        </Link>
+
     )
 }
 
