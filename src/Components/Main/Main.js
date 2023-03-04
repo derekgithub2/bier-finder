@@ -37,7 +37,7 @@ const Main = () => {
         return () => {
           setLoading(false);
         };
-    }, [page]);
+    }, [searchInput, page]);
 
     return (
         <div className='main'>
