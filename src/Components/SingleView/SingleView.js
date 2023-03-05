@@ -1,21 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from 'react-router-dom'
 import './SingleView.css'
+import Card from '../../Components/Card/Card'
 
 const SingleView = () => {
 
-    const {id} = useParams()
-    console.log(id)
-    const [brewery, setBrewery] = useState({})
+    const [randomBrews, setRandomBrews] = useState([])
     const [loading, setLoading] = useState(true);
     
 
     useEffect(()=> {
         const fetchData = async () => {
-            const response = await fetch(`https://api.openbrewerydb.org/breweries/${id}`)
-            const singleBrew = await response.json()
+            const response = await fetch(`https://api.openbrewerydb.org/breweries/random?size=5`)
+            const data = await response.json()
             if (loading) {
-                setBrewery(singleBrew)
+                setRandomBrews(data)
                 console.log("fetch worked")
             }
             return () => {
@@ -26,13 +24,21 @@ const SingleView = () => {
 
     },[])
 
-    // setTimeout(5000)
-    // console.log(brewery)
-
     return (
-        <div className='single-view'>
-            <p>SINGLE PAGE VIEW</p>
-            {id}
+        <div className='random-breweries'>
+            <section className="card-grid">
+                {randomBrews.map((brew) => {
+                    return <Card 
+                    key={brew.id}
+                    name={brew.name} 
+                    type={brew['brewery_type']}
+                    street={brew.street}
+                    city={brew.city}
+                    state={brew.state}
+                    website={brew.website}
+                    phone={brew.phone}/>
+                })}
+            </section>
         </div>
     )
 }
