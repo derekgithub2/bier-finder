@@ -1,37 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css';
 import Header from '../Header/Header'
 import Main from '../Main/Main'
-import { Router, Route, Link, Routes } from 'react-router-dom'
+import Form from '../Form/Form'
+import SingleView from '../RandomBrews/RandomBrews'
+import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
+
+  const [searchInput, setSearchInput] = useState('')
 
   return (
     <div className='App'>
       <Header />
-      <main className='main-container'>
-        <Main />
-      </main>
-
-      {/* <Routes>
-        <Route 
-          path='/' 
-          element={
-            <div className='App'>
-              <Header />
-              <main className='main-container'>
-                <Main />
-              </main>
-            </div>} 
-        />
-        <Route 
-          exact path='/:id'
-          render={() => (
-            Single view here
-          )}
-        />
-      </Routes> */}
-
+      <section className='form-container'>
+                <p>Select a state below:</p>
+                <Form setSearch={setSearchInput} />
+      </section>
+      <Routes>
+        <Route path='/search' element={<Main searchInput={searchInput}/>}/>
+        <Route path='/' element={<SingleView />}/>
+        {/* <Route path='*' element={<NotFound />}/> */}
+      </Routes>
     </div>
   )
 }
