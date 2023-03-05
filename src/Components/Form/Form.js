@@ -37,7 +37,7 @@ const Form = ({setSearch}) => {
         <datalist id="dropdown-menu">{stateList}</datalist>
         <div>
           <button onClick={handleClick} type="submit">
-            Go!
+            GO!
           </button>
         </div>
       </form>

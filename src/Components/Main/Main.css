@@ -9,12 +9,15 @@
 .main {
     border: 1px solid black;
     border-radius: 2em;
-    height: 75%;
+    height: auto;
+    background-color:rgb(240, 213, 107, 0.5);
 }
 
 .form-container {
+    display: flex;
     justify-content: center;
     padding-bottom: 2em;
+    color: rgb(255, 255, 255);
 }
 
 .page-selection>button {
@@ -25,6 +28,10 @@
     display: grid;
     gap: 2em;
     margin-top: 1em;
+}
+
+.loading {
+    color: white;
 }
 
 /*Mobile Sizes*/
