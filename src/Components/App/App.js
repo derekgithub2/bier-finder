@@ -12,10 +12,12 @@ const App = () => {
 
   return (
     <div className='App'>
+      <section className="top-container">
       <Header />
       <section className='form-container'>
-                <p>Select a state below:</p>
+                <p>Select a state:</p>
                 <Form setSearch={setSearchInput} />
+      </section>
       </section>
       <Routes>
         <Route path='/search' element={<Main searchInput={searchInput}/>}/>
