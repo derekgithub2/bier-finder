@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Main.css'
-import Form from '../Form/Form'
 import Card from '../Card/Card'
 
 const Main = ({searchInput}) => {
@@ -75,31 +74,6 @@ const Main = ({searchInput}) => {
             </div>
         )
     }
-    return (
-        <div className='main'>
-            <section className='page-selection'>
-                <button onClick={handlePage} value='1'>Page 1</button>
-                <button onClick={handlePage} value='2'>Page 2</button>
-                <button onClick={handlePage} value='3'>Page 3</button>
-                <button onClick={handlePage} value='4'>Page 4</button>
-                <button onClick={handlePage} value='5'>Page 5</button>
-            </section>
-            {error ? error : ''}
-            <section className="card-grid">
-                {dataList.map((brew) => {
-                    return <Card 
-                    key={brew.id}
-                    name={brew.name} 
-                    type={brew['brewery_type']}
-                    street={brew.street}
-                    city={brew.city}
-                    state={brew.state}
-                    website={brew.website}
-                    phone={brew.phone}/>
-                })}
-            </section>
-        </div>
-    )
 }
 
 export default Main;

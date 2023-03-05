@@ -7,7 +7,6 @@ const SingleView = () => {
     const [randomBrews, setRandomBrews] = useState([])
     const [loading, setLoading] = useState(true);
     
-
     useEffect(()=> {
         const fetchData = async () => {
             const response = await fetch(`https://api.openbrewerydb.org/breweries/random?size=5`)
@@ -21,7 +20,6 @@ const SingleView = () => {
             }
         }
         fetchData()
-
     },[])
 
     return (
