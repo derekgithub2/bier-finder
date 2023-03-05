@@ -30,6 +30,10 @@
     margin-top: 1em;
 }
 
+.loading {
+    color: white;
+}
+
 /*Mobile Sizes*/
 @media screen and (max-width: 425px) {
     .card-grid {

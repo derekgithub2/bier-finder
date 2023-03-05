@@ -61,7 +61,7 @@ const Main = ({searchInput}) => {
         )
     } else if (loading) {
         return (
-            <div>
+            <div className='loading'>
                 {loading && <h1>Loading...</h1>}
             </div>
         )
