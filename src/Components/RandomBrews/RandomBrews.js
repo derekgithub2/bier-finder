@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import './SingleView.css'
-import Card from '../../Components/Card/Card'
+import './RandomBrews.css'
+import Card from '../Card/Card'
 
 const SingleView = () => {
 

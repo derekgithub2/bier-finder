@@ -3,7 +3,7 @@ import './App.css';
 import Header from '../Header/Header'
 import Main from '../Main/Main'
 import Form from '../Form/Form'
-import SingleView from '../SingleView/SingleView'
+import SingleView from '../RandomBrews/RandomBrews'
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
