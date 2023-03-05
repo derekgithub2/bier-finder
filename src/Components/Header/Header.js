@@ -1,12 +1,15 @@
 import React from "react"
 import './Header.css'
 import icon from '../../images/beer_icon.png'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
         <div className="header">
-            <img className='logo' src={icon} alt='beer-icon-logo' />
-            <h1>Bierfinder</h1>
+            <Link to='/' className="home-button">
+                <img className='logo' src={icon} alt='beer-icon-logo' />
+            </Link>
+            <h1 className='title'>Bierfinder</h1>
         </div>
     )
 }

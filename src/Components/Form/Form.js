@@ -24,7 +24,7 @@ const Form = ({setSearch}) => {
 
   return (
     <div>
-      <form>
+      <form className="form">
         <input
           type="text"
           placeholder="Search..."

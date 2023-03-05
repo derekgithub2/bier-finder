@@ -1,7 +1,6 @@
 .card {
     border: 2px solid black;
     border-radius: 10px;
-    cursor: pointer;
     height: 100%;
     max-width: 100%;
     object-fit: contain;
