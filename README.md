@@ -54,7 +54,7 @@ Future iterations of this project aim to implement further filtering options inc
    
 ### View without installation
   
-<!--   Simply go to [our deployed link](https://stretch-tech-iota.vercel.app/) -->
+  See the project here! [deployed link](bier-finder-i8m5a1fxg-derekgithub2.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
