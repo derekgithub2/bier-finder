@@ -20,13 +20,14 @@ const Main = ({searchInput}) => {
           const response = await fetch(
             `https://api.openbrewerydb.org/breweries?by_state=${searchInput}&per_page=50&page=${page}`
           )
-          const newData = await response.json();
+          const newData = await response.json()
+                                        .catch((error) => {
+                                            setLoading(false)
+                                            setError(error)
+                                        })
           setDataList(newData)
           setLoading(false)
-          .catch((error) => {
-            setLoading(false)
-            setError(error)
-          })
+
 
         };
         fetchData();
