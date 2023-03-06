@@ -17,7 +17,11 @@ Future iterations of this project aim to implement further filtering options inc
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Deplayed Link
+  
+  See the project here! [deployed link](bier-finder-i8m5a1fxg-derekgithub2.vercel.app/)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
@@ -51,12 +55,6 @@ Future iterations of this project aim to implement further filtering options inc
    ```sh
    Example: http://localhost:3000/
    ```
-   
-### View without installation
-  
-  See the project here! [deployed link](bier-finder-i8m5a1fxg-derekgithub2.vercel.app/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- USAGE EXAMPLES -->
