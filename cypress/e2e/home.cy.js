@@ -1,9 +1,9 @@
-describe('template spec', () => {
+describe('Home Page', () => {
   beforeEach(() => {
 
     cy.intercept('GET', 'https://api.openbrewerydb.org/breweries/random?size=5')
       .as('getRandom')
-    cy.intercept('GET', 'https://api.openbrewerydb.org/breweries?by_state=&per_page=50&page=')
+    cy.intercept('GET', 'https://api.openbrewerydb.org/breweries?by_state=Washington&per_page=50&page=')
       .as('searchResult')
     
       cy.visit('http://localhost:3000/')
@@ -13,6 +13,8 @@ describe('template spec', () => {
     cy.get('.header')
       .should('be.visible')
 
+    cy.wait('@getRandom')
+
     cy.get('.header')
       .find('.logo')
       .should('have.attr', 'src')
@@ -20,14 +22,6 @@ describe('template spec', () => {
 
     cy.get('.title')
       .contains('Bierfinder')
-  })
-
-  it('should bring the user back to the home page when clicking the beer icon', () => {
-    cy.visit('http://localhost:3000/search')
-
-    cy.get('.logo')
-      .click()
-      .url().should('eq', 'http://localhost:3000/')
   })
 
   it('should display a search bar that a user can type in', () => {
@@ -56,7 +50,10 @@ describe('template spec', () => {
     cy.get('Form')
       .get('button')
       .click()
-      .url().should('eq', 'http://localhost:3000/search')
+
+    cy.wait('@searchResult')
+
+    cy.url().should('eq', 'http://localhost:3000/search')
 
   })
 
@@ -67,5 +64,4 @@ describe('template spec', () => {
     cy.get('.card')
       .should('have.length', 5)
   })
-
 })

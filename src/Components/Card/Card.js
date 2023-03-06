@@ -4,13 +4,9 @@ import './Card.css'
 
 const Card = ({name, type, street, city, state, website, phone}) => {
 
-    let formattedPhoneNumber;
 
-    if(phone){
-        let format = (''+phone).replace(/\D/g,'')
-        let match = format.match(/^(\d{3})(\d{3})(\d{4})$/)
-        formattedPhoneNumber = `(${match[1]}) ${match[2]+"-"+match[3]}`
-    }
+    let formattedPhoneNumber = phone
+
 
     return (
         <a href={`https://www.google.com/search?q=${name}`} style={{textDecoration: 'inherit', color: 'inherit'}}>

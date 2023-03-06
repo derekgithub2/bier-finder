@@ -13,7 +13,6 @@ const SingleView = () => {
             const data = await response.json()
             if (loading) {
                 setRandomBrews(data)
-                console.log("fetch worked")
             }
             return () => {
                 setLoading(false)

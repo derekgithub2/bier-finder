@@ -15,7 +15,11 @@ const Form = ({setSearch}) => {
   const handleClick = (e) => {
     e.preventDefault();
     setSearch(userChoice);
-    navigate('/search')
+    if(states.includes(userChoice)){
+      navigate('/search')
+    } else {
+      navigate('/notfound')
+    }
   };
 
   const stateList = states.map((state) => {
