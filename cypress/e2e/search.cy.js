@@ -54,8 +54,15 @@ describe('Search function', () => {
 
   it('should direct you to the Not Found page if the url path is not valid', () => {
     cy.get('Form')
-    .get('input[type="text"]')
-    .get('input[placeholder="Search..."]')
+      .get('input[type="text"]')
+      .get('input[placeholder="Search..."]')
+      .type("stateofwashington")
+
+    cy.get('Form')
+      .get('button')
+      .click()
+    
+    cy.url().should('eq', 'http://localhost:3000/notfound')
 
   })
 })
