@@ -14,12 +14,13 @@ Future iterations of this project aim to implement further filtering options inc
 
 ![Screen Shot 2023-03-05 at 5 06 01 PM](https://user-images.githubusercontent.com/113647295/222997707-5d757503-5e35-48d6-acff-4300e9f344d3.png)
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Deplayed Link
-  
-  #### See the project here! [Open Bierfinder](bier-finder-i8m5a1fxg-derekgithub2.vercel.app/)
+<div>
+  <h2 align="center">Deployment Link</h2>
+</div>
+
+See the project here! **[Bierfinder](bier-finder-i8m5a1fxg-derekgithub2.vercel.app/)**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
