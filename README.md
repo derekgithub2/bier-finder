@@ -1,12 +1,18 @@
 
-<h2 align="center">Bierfinder</h2>
+<h1 align="center">Bierfinder</h1>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+Bierfinder is a project built to help quickly help users find breweries in any state they choose. Using the search bar, a user can search for a state within the United States and the page will populate all the breweries registered at the [Brewers Association](https://www.brewersassociation.org/) for that given state. 
 
+All data was pulled using the [OpenBreweryDB API](https://www.openbrewerydb.org/). 
 
-<!-- <img width="1278" alt="Screenshot 2023-02-27 at 2 18 55 PM" src="https://user-images.githubusercontent.com/113863021/221687966-e3c5641f-5a8e-4070-86c2-fff75d725340.png"> -->
+Future iterations of this project aim to implement further filtering options including: 
+- filtering by type of brewery
+- distance from current location
+
+![Screen Shot 2023-03-05 at 5 06 01 PM](https://user-images.githubusercontent.com/113647295/222997707-5d757503-5e35-48d6-acff-4300e9f344d3.png)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -56,7 +62,7 @@
 <!-- USAGE EXAMPLES -->
 ## Preview
 
-<!-- ![ezgif com-video-to-gif](https://user-images.githubusercontent.com/113863021/221703314-2403fa74-4f47-4e32-bfdc-9ff31681ad98.gif) -->
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/113647295/222998241-7583429e-c337-465f-a176-40946ab0d03e.gif)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
