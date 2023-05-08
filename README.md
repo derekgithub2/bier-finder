@@ -20,7 +20,7 @@ Future iterations of this project aim to implement further filtering options inc
   <h2 align="center">Deployment Link</h2>
 </div>
 
-See the project here! **[Bierfinder](bier-finder-i8m5a1fxg-derekgithub2.vercel.app/)**
+See the project here! [Bierfinder](bier-finder-i8m5a1fxg-derekgithub2.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
